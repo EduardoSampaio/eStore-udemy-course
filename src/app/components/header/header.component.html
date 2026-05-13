@@ -1,0 +1,43 @@
+<div class="w-full shadow-lg shadow-gray-500/50 bg-gray-900">
+  <div class="flex items-center">
+    <div class="text-white ml-2 p-3 w-[23%]">
+      <h1 class="text-xl font-bold">eStore</h1>
+    </div>
+    <div class="p-0 my-4 w-[50%] h-[2.5rem] bg-white flex items-center">
+      <select
+        class="w-auto bg-gray-300 h-full border-none font-semibold px-2 pr-5"
+      >
+        <option>Men</option>
+        <option>Women</option>
+        <option>Kids</option>
+      </select>
+      <input
+        class="w-[90%] h-full inline-block border-none outline-none px-3"
+        placeholder="Search..."
+      />
+      <button
+        class="w-[10%] h-10 border-none bg-gray-300 flex justify-center items-center"
+      >
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </button>
+    </div>
+    <div class="flex items-center w-[25%] gap-6 justify-end h-full">
+      <div class="flex items-center gap-2 text-white mr-4">
+        <fa-icon [icon]="faUserCircle" class="text-[1.3em]"></fa-icon>
+        <h5>
+          <a href="#" class="text-white no-underlinehover:underline">Sign in</a>
+        </h5>
+        <span>/</span>
+        <h5>
+          <a href="#" class="text-white no-underlinehover:underline"
+            >Register</a
+          >
+        </h5>
+      </div>
+      <div class="flex items-center gap-4 text-white text-[1.3em]">
+        <fa-icon [icon]="faHeart"></fa-icon>
+        <fa-icon [icon]="faCartShopping"></fa-icon>
+      </div>
+    </div>
+  </div>
+</div>
