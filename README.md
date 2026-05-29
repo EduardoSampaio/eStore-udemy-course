@@ -1,59 +1,75 @@
 # Estore
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.22.
+Aplicação de e-commerce front-end construída com Angular 19. O projeto inclui uma página inicial com navegação de categorias, listagem de produtos e ratings por estrelas usando ícones FontAwesome.
 
-## Development server
+## Visão geral
 
-To start a local development server, run:
+- Interface de loja online com navegação de categorias e produtos.
+- Componente de avaliações (`ratings`) com estrelas cheias, meia estrela e estrela vazia.
+- SSR habilitado com `@angular/ssr` e script para servir o app em modo servidor.
+- Uso de `signals` e `computed` para estado reativo.
 
-```bash
-ng serve
-```
+## Tecnologias
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 19
+- Angular SSR
+- FontAwesome Angular
+- Tailwind CSS
+- RxJS
 
-## Code scaffolding
+## Estrutura principal
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `src/app/components/home`: página inicial, header, navegação e side navigation
+- `src/app/components/products`: listagem de produtos
+- `src/app/components/ratings`: componente de avaliação por estrelas
+- `src/app/components/home/services`: serviço de categorias e store reativa
+- `src/app/main.ts`: bootstrap do cliente
+- `src/app/main.server.ts`: bootstrap do servidor
+- `src/server.ts`: servidor SSR
 
-```bash
-ng generate component component-name
-```
+## Instalação
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+No diretório do projeto:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## Desenvolvimento
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Abra `http://localhost:4200/` no navegador.
 
-## Additional Resources
+## Modo SSR
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run serve:ssr:estore
+```
+
+## Build para produção
+
+```bash
+npm run build
+```
+
+Os arquivos compilados serão gerados em `dist/`.
+
+## Testes
+
+Executar testes unitários:
+
+```bash
+npm test
+```
+
+## Observações
+
+- O serviço de categorias faz requisição para `http://localhost:5001/product-categories`.
+- Garanta que o backend de categorias esteja ativo para carregar dados dinâmicos de categorias.
+
+## Contato
+
+README atualizado para documentar a execução e a estrutura do projeto Estore.
