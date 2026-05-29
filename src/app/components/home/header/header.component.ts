@@ -7,6 +7,7 @@ import {
   faSearch,
   faUserCircle,
 } from '@fortawesome/free-solid-svg-icons';
+import { CategoriesStoreItem } from '../services/categories.store-item';
 
 @Component({
   selector: 'app-header',
@@ -19,4 +20,6 @@ export class HeaderComponent {
   faUserCircle = faUserCircle;
   faHeart = faHeart;
   faCartShopping = faCartShopping;
+
+  constructor(public categoryStore: CategoriesStoreItem) {}
 }

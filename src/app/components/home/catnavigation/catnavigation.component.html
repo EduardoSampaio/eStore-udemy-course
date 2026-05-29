@@ -1,39 +1,18 @@
 <div class="bg-gray-800 border-t border-gray-600">
   <ul class="flex">
     <li class="list-none inline-block mx-4 py-1.5 h-10 relative group">
-      <a
-        href="#"
-        class="text-white text-sm font-bold no-underline relative pb-0"
-      >
-        Men
-        <span
-          class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"
-        ></span>
+      <a href="#" class="text-white text-sm font-bold no-underline relative pb-0">
+        Home
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
       </a>
     </li>
+    @for(category of categoryStore.topLevelCategories(); track category.id) {
     <li class="list-none inline-block mx-4 py-1.5 h-10 relative group">
-      <a href="#" class="text-white text-sm font-bold no-underline relative">
-        Women
-        <span
-          class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"
-        ></span>
+      <a href="javaScript:void(0)" class="text-white text-sm font-bold no-underline relative pb-0">
+        {{ category.category }}
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
       </a>
     </li>
-    <li class="list-none inline-block mx-4 py-1.5 h-10 relative group">
-      <a href="#" class="text-white text-sm font-bold no-underline relative">
-        Kids
-        <span
-          class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"
-        ></span>
-      </a>
-    </li>
-    <li class="list-none inline-block mx-4 py-1.5 h-10 relative group">
-      <a href="#" class="text-white text-sm font-bold no-underline relative">
-        Best offers
-        <span
-          class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"
-        ></span>
-      </a>
-    </li>
+    }
   </ul>
 </div>
